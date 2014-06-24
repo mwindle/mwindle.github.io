@@ -1,1 +1,416 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marc Windle</title>
+	<link href="//fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+	<!-- Bootstrap -->
+	<!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- <link href="bower_components/onepage-scroll/onepage-scroll.css" rel="stylesheet"> -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	    
+	<!--
+	<link href="css/mwindle.css" rel="stylesheet">
+	<script src="js/mwindle.js"></script>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	 <script src="bower_components/onepage-scroll/jquery.onepage-scroll.min.js"></script> 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.js"></script>-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style>
+	
+	/* General Styles */
+	* {
+		margin: 0em;
+		padding: 0em;
+	}
+	
+	body {
+		margin: 0em;
+		/*font-family: Georgia,Cambria,"Times New Roman",Times,serif;*/
+		font-family: "Proxima Nova Regular","Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+		font-size: 1.5em;
+		font-weight: 400;
+		line-height: 2.0em;
+		letter-spacing: 0.02em;
+	}
+
+	section {
+		min-height: 25em;
+		height: 100dv;
+		margin: 0em;
+		overflow: clip;
+	}
+
+	h1, h2, h3, h4 {
+		width: 100%;
+		text-align: center;
+		/*font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;*/
+		font-family: "Skolar Bold","Segoe UI Bold","Roboto Slab","Droid Serif",AvenirNext-Bold,"Avenir Bold",Georgia,"Times New Roman",Times,serif;
+		font-weight: 700;
+	}
+	.title {
+		font-size: 1.8em;
+		line-height: 2.4em;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		padding-top: 3em;
+	}
+
+	/* Header Styles */
+	.header#header {
+		display: none;
+	}
+	
+	
+	/* Overview Section Styles */
+	section#overview {
+		background-color: #222930;
+		color: #ABDCD6;
+	}
+	section#overview a {
+		color: #E9E9E9;
+	}
+	section#overview a:hover {
+		color: #ABDCD6;
+	}
+	section#overview .title {
+		width: 100%;
+		text-align: center;
+		color: #E9E9E9;
+	}
+	section#overview .identity {
+		width: 100%;
+		text-align: center;
+	}
+	ul.pagelinks {
+		width: 100%;
+		text-align: center;
+		padding: 0em;
+		padding-top: 4em;
+	}
+	ul.pagelinks li {
+		list-style: none;
+	}
+	section#overview .scrollteaser {
+		width: 8em;
+		height: 8em;
+		position: absolute;
+		bottom: -4em;
+		left: 50%;
+		margin-left: -4em;
+		text-align: center;
+		font-weight: 100;
+		background-color: #F6F6F6; 
+		color: #2B2B2B;
+		text-decoration: none;
+		
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%; /* future proofing */
+		-khtml-border-radius: 50%; /* for old Konqueror browsers */
+	}
+	
+	section#overview .scrollteaser .nextsectiontitle {
+		padding-top: 2em;
+	}
+	
+	
+	/* Experience Section Styles */
+	section#experience {
+		background-color: #F6F6F6;
+		color: #2B2B2B;
+	}
+	section#experience a, section#experience .title {
+		color: rgba(255,144, 12,1);
+	}
+	section#experience a:hover {
+		color: #2B2B2B;
+	}
+	.experience {
+		overflow: hidden;
+		width: 45em;
+		podding-bottom: 2em;
+		position: relative;
+		left: 50%;
+		margin-left: -22.5em;
+	}
+	.experience:hover {
+		background-color: #FFFCEC;
+	}
+	.experience .logo_image {
+		width: 7em;
+		float: left;
+		padding: 1em;
+	}
+	.experience .logo_image img {
+		width: 100%;
+		height: 100%;
+		background-color: rgb(255, 255, 255);
+	}
+	.experience, .experience .logo_image img {
+		/* rounded corners */
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px; /* future proofing */
+		-khtml-border-radius: 10px; /* for old Konqueror browsers */
+	}
+	.jobdetails {
+		width: 33em;
+		float: left;
+		padding: 1em;
+	}
+	.experience:nth-child(odd):hover {
+		/*background-color: rgba( 44, 104,116,1);*/
+		
+	}
+	.experience:nth-child(even):hover {
+		/*background-color: rgba( 44, 104,116,1);*/
+		
+	}
+	.experience:nth-child(even) .logo_image, .experience:nth-child(even) .jobdetails {
+		float: right;
+	}
+	.jobdetails span {
+		font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+		font-weight: 600;
+		font-size: 1.1em;
+	}
+	.jobdetails .company:after {
+		content: " - ";
+	}
+	.jobdetails .type, .jobdetails .dates {
+		font-weight: 100;
+		font-size: .8em;
+		letter-spacing: normal;
+		line-height: auto;
+	}
+	.jobdetails .type {
+		color: rgba(128, 128, 128,1);
+	}
+	.jobdetails .dates {
+		float: right;
+	}
+	.jobdetails .team {
+		display: none;
+	}
+	
+	
+	
+	/* Project Section Styles */
+	section#projects {
+		background-color: #699E87;
+		color: #2B2B2B;
+	}
+	section#projects a, section#projects .title {
+		color: #FFFFFF;
+	}
+	section#projects a:hover {
+		color: #2B2B2B;
+	}
+	
+	/* About Section Styles */
+	section#about {
+		background-color: rgba(255,144, 12,1);
+		color: rgba(255, 255, 255, 1);
+	}
+	section#about a {
+		color: rgba(255,196,125,1);
+	}
+	section#about a:hover {
+		color: rgba(255,237,215,1);
+	}
+	section#about p.about {
+		width: 36em;
+		position: relative;
+		left: 50%;
+		margin-left: -18em;
+		padding-top: 4em;
+	}
+	section#about .imagecontainer {
+		width: 600px;
+		position: relative;
+		left: 50%;
+		margin-left: -300px;
+	}
+	
+
+	footer#footer {
+		background-color: rgb(102, 102, 102);
+		color: #FFFFFF;
+	}
+	footer#footer a {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	footer#footer a:hover {
+		color: black;
+	}
+	footer#footer ul {
+		padding: 2em 0em 2em 2em;
+	}
+	footer#footer ul li {
+		list-style: none;
+		display: inline;
+	}
+	footer#footer ul li:after {
+		content: " | ";
+		color: auto;
+	}
+	
+	</style>
+	
+</head>
+
+<body>
+	<div class="page">
+		<header id="header" class="header header--fixed hide-from-print" role="banner">
+			<ul class="sociallinks">
+				<a class="github" href="https://github.com/mwindle"><li>Github</li></a>
+				<a class="twitter" href="https://twitter.com/mwindle4"><li>Twitter</li></a>
+				<a class="linkedin" href="http://ca.linkedin.com/pub/marc-windle/55/b30/908/"><li>LinkedIn</li></a>
+				<a class="blog" href="https://blog.marcwindle.me"><li>Blog</li></a>
+			</ul>
+		</header>
+		<section id="overview">
+			<h2 class="title">Marc Windle</h2>
+			<h3 class="identity">Software Engineer with an affinity for Web Development</h3>
+			<ul class="pagelinks">
+				<a href="#experience"><li>Experience</li></a>
+				<a href="#projects"><li>Projects</li></a>
+				<a href="#about"><li>About</li></a>
+			</ul>
+			<a href="#experience" class="scrollteaser">
+				<h4 class="nextsectiontitle">Experience</h4>
+			</a>
+		</section>
+		<section id="experience">
+			<h2 class="title">Experience</h2>
+			<div class="experiences">
+				<div class="experience" id="amazon">
+					<div class="logo_image"><img src="/images/amazon.svg" /></div>
+					<div class="jobdetails">
+						<span class="company">Amazon</span>
+						<span class="jobtitle">Technical Program Manager</span>
+						<span class="type">(full-time)</span>
+						<span class="dates">Feb '13 - Present</span>
+						<span class="team">Financial Ledgers and Accounting Systems</span>
+						<ul class="outcomes">
+							<li>Worked on projects providing platform capabilities to automate payments and accounting activities for various Amazon businesses.</li>
+							<li>Responsibilities include software design, scheduling, and project management.</li>
+							<li>Managed a multi-team architectural improvement project that improved accounting accuracy, reduced	operational burden, and reduced coupling between the financial platforms and business systems. </li>
+						</ul>
+					</div>
+				</div>
+				<div class="experience" id="microsoft">
+					<div class="logo_image"><img src="/images/microsoft.svg" /></div>
+					<div class="jobdetails">
+						<span class="company">Microsoft</span>
+						<span class="jobtitle">Program Manager</span>
+						<span class="type">(full-time)</span>
+						<span class="dates">Sep '08 – Feb '13</span>
+						<span class="team">SharePoint Online</span>
+						<ul class="outcomes">
+							<li>Worked for four and a half years as a technical Program Manager at Microsoft building the SharePoint Online (SPO) cloud service (part of Office 365) from the ground up. I helped the service grow from an idea to a globally-scaled cloud service with multiple data centers, machine counts in the tens of thousands, and customers in the millions.</li>
+							<li>Proposed, designed, and managed development of a data replication solution to achieve disaster recovery objectives for customer SharePoint data.</li>
+							<li>Broad range of design and project management experience covering areas such as high availability, disaster recovery, traffic routing, deployment, upgrade, and patching. Listed as inventor on ten U.S. software design patents (nine pending) for my technical design work. Check out <a href="http://tinyurl.com/ape2eft" target="_blank">http://tinyurl.com/ape2eft</a> for patent details.</li>
+							<li>Recipient of a Gold Star award for the design and implementation of a traffic routing optimization that allowed us to ship on time and save $1M+ in hardware expenses.</li>
+							<li>Gained substantial experience in the area of commercial software and services development, executing as a program manager for multiple milestones and cycles, shipping real products and services to real customers.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="experience" id="blackberry">
+					<div class="logo_image"><img src="/images/blackberry.svg" /></div>
+					<div class="jobdetails">
+						<span class="company">BlackBerry</span>
+						<span class="jobtitle">Project Coordinator</span>
+						<span class="type">(intern)</span>
+						<span class="dates">May '06 – Aug '07</span>
+						<span class="team">Handheld Program Management</span>
+						<ul class="outcomes">
+							<li>Managed the full lifecycle of internal software systems from inception through to maintenance.</li>
+							<li>Worked with cross-functional teams throughout the organization to gather and define requirements for internal solutions aimed at process automation, data collection, and reporting.</li>
+							<li>Designed and developed a Change Request Management system and other applications for use by internal teams.</li>
+							<li>Implemented multiple applications in PHP, HTML, CSS, and JavaScript, with persistence in MS SQL.</li>
+							<li>Developed both project and software related deliverables including project schedules, software requirements specifications, test plans, and design documents.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="experience" id="wck">
+					<div class="jobdetails">
+						<span class="company">Western Canoeing &amp; Kayaking</span>
+						<span class="jobtitle">Web Developer</span>
+						<span class="type">(part-time)</span>
+						<span class="dates">Sep '03 - May '06</span>
+						<ul class="outcomes">		
+							<li>Worked closely with the marketing coordinator to construct and maintain company retail and manufacturing websites implemented in PHP, HTML, CSS, and JavaScript, with MySQL database persistence.</li>
+							<li>Developed a solution to synchronize the retail store’s legacy ACCPAC inventory with a Web-hosted MySQL database, enabling online customer ordering based on real inventory.</li>
+							<li>Assisted with maintenance and repair of the on-site network infrastructure.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="projects">
+			<h2 class="title">Projects</h2>
+			<ul class="project_list">
+				<li class="nowserving">
+					<h1>Now Serving</h1>
+					<p>Make waiting customers happy</p>
+				</li>
+			</ul>
+		</section>
+		<section id="about">
+			<h2 class="title">About</h2>
+			<div class="imagecontainer">
+				<img src="images/me.png" />
+			</div>
+			<p class="about">
+			Hey there! I'm Marc Windle, a Bachelor of Software Engineering graduate from UVic with seven plus years of experience between Amazon, Microsoft, and BlackBerry. 
+			I'm passionate about Web technologies and building cool things with software. 
+			</p>
+		</section>
+		<footer id="footer">
+			<ul class="sociallinks">
+				<a class="github" href="https://github.com/mwindle"><li>Github</li></a>
+				<a class="twitter" href="https://twitter.com/mwindle4"><li>Twitter</li></a>
+				<a class="linkedin" href="http://ca.linkedin.com/pub/marc-windle/55/b30/908/"><li>LinkedIn</li></a>
+				<a class="blog" href="https://blog.marcwindle.me"><li>Blog</li></a>
+			</ul>
+		</footer>
+	</div>
+	
+	<script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+		var resizeSections = function(){
+			$('section').css('min-height', $(window).innerHeight() + 10);
+			$('section#overview').css('height', $(window).innerHeight());
+		}
+		$(document).ready(function() {
+			resizeSections();
+			$(window).resize(resizeSections);
+		});
+	</script>
+</body>
+</html>
