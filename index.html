@@ -31,20 +31,19 @@
 	* {
 		margin: 0em;
 		padding: 0em;
+		max-width: 100%;
 	}
 	
 	body {
-		margin: 0em;
-		/*font-family: Georgia,Cambria,"Times New Roman",Times,serif;*/
-		font-family: "Proxima Nova Regular","Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
-		font-size: 1.5em;
+		font-family: "Proxima Nova Regular", "Segoe UI",Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+		font-size: 1em;
 		font-weight: 400;
-		line-height: 2.0em;
+		line-height: 1.5em;
 		letter-spacing: 0.02em;
 	}
 
 	section {
-		min-height: 25em;
+		min-height: 100%;
 		height: 100dv;
 		margin: 0em;
 		overflow: clip;
@@ -53,16 +52,17 @@
 	h1, h2, h3, h4 {
 		width: 100%;
 		text-align: center;
-		/*font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;*/
-		font-family: "Skolar Bold","Segoe UI Bold","Roboto Slab","Droid Serif",AvenirNext-Bold,"Avenir Bold",Georgia,"Times New Roman",Times,serif;
+		font-family: "Skolar Bold", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif;
 		font-weight: 700;
 	}
 	.title {
-		font-size: 1.8em;
-		line-height: 2.4em;
+		font-size: 1.5em;
+		line-height: 2.0em;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
-		padding-top: 3em;
+		padding-top: 0.5em;
+		position: relative;
+		z-index: 100;
 	}
 
 	/* Header Styles */
@@ -94,8 +94,7 @@
 	ul.pagelinks {
 		width: 100%;
 		text-align: center;
-		padding: 0em;
-		padding-top: 4em;
+		padding-top: 1em;
 	}
 	ul.pagelinks li {
 		list-style: none;
@@ -112,13 +111,13 @@
 		background-color: #F6F6F6; 
 		color: #2B2B2B;
 		text-decoration: none;
+		z-index: 1;
 		
 		-moz-border-radius: 50%;
 		-webkit-border-radius: 50%;
 		border-radius: 50%; /* future proofing */
 		-khtml-border-radius: 50%; /* for old Konqueror browsers */
 	}
-	
 	section#overview .scrollteaser .nextsectiontitle {
 		padding-top: 2em;
 	}
@@ -137,52 +136,24 @@
 	}
 	.experience {
 		overflow: hidden;
-		width: 45em;
-		podding-bottom: 2em;
-		position: relative;
-		left: 50%;
-		margin-left: -22.5em;
+		padding: 1em;
 	}
 	.experience:hover {
 		background-color: #FFFCEC;
 	}
 	.experience .logo_image {
-		width: 7em;
-		float: left;
-		padding: 1em;
-	}
-	.experience .logo_image img {
-		width: 100%;
-		height: 100%;
-		background-color: rgb(255, 255, 255);
-	}
-	.experience, .experience .logo_image img {
-		/* rounded corners */
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
-		border-radius: 10px; /* future proofing */
-		-khtml-border-radius: 10px; /* for old Konqueror browsers */
+		display: none;
 	}
 	.jobdetails {
-		width: 33em;
-		float: left;
-		padding: 1em;
-	}
-	.experience:nth-child(odd):hover {
-		/*background-color: rgba( 44, 104,116,1);*/
-		
-	}
-	.experience:nth-child(even):hover {
-		/*background-color: rgba( 44, 104,116,1);*/
-		
-	}
-	.experience:nth-child(even) .logo_image, .experience:nth-child(even) .jobdetails {
-		float: right;
+		width: 100%;
 	}
 	.jobdetails span {
-		font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 1.1em;
+	}
+	.jobdetails ul {
+		width: 100%;
+		padding-left: 1em;
 	}
 	.jobdetails .company:after {
 		content: " - ";
@@ -217,6 +188,7 @@
 		color: #2B2B2B;
 	}
 	
+	
 	/* About Section Styles */
 	section#about {
 		background-color: rgba(255,144, 12,1);
@@ -229,17 +201,15 @@
 		color: rgba(255,237,215,1);
 	}
 	section#about p.about {
-		width: 36em;
-		position: relative;
-		left: 50%;
-		margin-left: -18em;
-		padding-top: 4em;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
 	}
 	section#about .imagecontainer {
-		width: 600px;
+		width: 300px;
 		position: relative;
 		left: 50%;
-		margin-left: -300px;
+		margin-left: -150px;
 	}
 	
 
@@ -266,6 +236,108 @@
 		color: auto;
 	}
 	
+	
+	@media only screen and (min-width : 1224px) {
+		body {
+			font-size: 1.5em;
+			font-weight: 400;
+			line-height: 2.0em;
+			letter-spacing: 0.02em;
+		}
+		
+		.title {
+			font-size: 1.8em;
+			line-height: 2.4em;
+			letter-spacing: 0.03em;
+			padding-top: 1em;
+		}
+		.experience {
+			width: 45em;
+			position: relative;
+			left: 50%;
+			margin-left: -22.5em;
+		}
+		ul.pagelinks {
+			padding-top: 2em;
+		}
+		
+		/* There's enough room to show a nice image for the experience */
+		.experience .logo_image {
+			display: inline;
+			width: 7em;
+			max-width: 20%;
+			float: left;
+			padding: 1em;
+		}
+		.experience .logo_image img {
+			width: 100%;
+			height: 100%;
+			background-color: rgb(255, 255, 255);
+		}
+		.experience, .experience .logo_image img {
+			/* rounded corners */
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px; /* future proofing */
+			-khtml-border-radius: 10px; /* for old Konqueror browsers */
+		}
+		.experience:nth-child(even) .logo_image, .experience:nth-child(even) .jobdetails {
+			float: right;
+		}
+		
+		.jobdetails {
+			width: 33em;
+			max-width: 80%;
+			float: left;
+			padding: 1em;
+		}
+		.jobdetails span {
+			font-weight: 600;
+			font-size: 1.1em;
+		}
+		.jobdetails .company:after {
+			content: " - ";
+		}
+		.jobdetails .type, .jobdetails .dates {
+			font-weight: 100;
+			font-size: .8em;
+			letter-spacing: normal;
+			line-height: auto;
+		}
+		.jobdetails .type {
+			color: rgba(128, 128, 128,1);
+		}
+		.jobdetails .dates {
+			float: right;
+		}
+		.jobdetails .team {
+			display: none;
+		}
+		
+		section#about p.about {
+			width: 36em;
+			position: relative;
+			left: 50%;
+			margin-left: -18em;
+			padding-top: 4em;
+		}
+	}
+	
+	/* Very small height*/
+	@media only screen and (max-height : 300px) {
+		/* No need for scroll helpers */
+		section#overview .scrollteaser {
+			display: none;
+		}
+	}
+	
+	/* Small width */
+	@media only screen and (max-height : 300px) {
+		/* No space for my pic */	
+		section#about .imagecontainer {
+			display: none;
+		}
+	}
 	</style>
 	
 </head>
@@ -345,6 +417,7 @@
 					</div>
 				</div>
 				<div class="experience" id="wck">
+					<div class="logo_image"><img src="/images/wck.jpg" /></div>
 					<div class="jobdetails">
 						<span class="company">Western Canoeing &amp; Kayaking</span>
 						<span class="jobtitle">Web Developer</span>
@@ -410,6 +483,7 @@
 		$(document).ready(function() {
 			resizeSections();
 			$(window).resize(resizeSections);
+			//add this later with mobile detection to hide address bar: window.scrollTo(0, 1)}, 100;
 		});
 	</script>
 </body>
