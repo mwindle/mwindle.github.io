@@ -1,0 +1,373 @@
+
+
+/* General Styles */
+@first-breakpoint-width: 800px;
+@second-breakpoint-width: 1224px;
+@first-breakpoint-height: 500px;
+
+* {
+	margin: 0em;
+	padding: 0em;
+	max-width: 100%;
+}
+.sans-font-family {
+	font-family: "Proxima Nova Regular", "Segoe UI",Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.serif-font-family {
+	font-family: "Skolar Bold", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+	.sans-font-family;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5em;
+	letter-spacing: 0.02em;
+	text-align: justify;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		font-size: 1.5em;
+		font-weight: 400;
+		line-height: 2.0em;
+		letter-spacing: 0.02em;
+	}
+}
+
+section {
+	min-height: 100%;
+	height: 100dv;
+	margin: 0em;
+	overflow: clip;
+}
+
+h1, h2, h3, h4 {
+	width: 100%;
+	text-align: center;
+	
+	.serif-font-family;
+	font-weight: 700;
+}
+.title {
+	font-size: 1.5em;
+	line-height: 2.0em;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	padding-top: 0.5em;
+	position: relative;
+	z-index: 100;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {	
+		font-size: 1.8em;
+		line-height: 2.4em;
+		letter-spacing: 0.03em;
+		padding-top: 1em;
+	}
+}
+.rounded-corners {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+.padded {
+	padding: 1em;
+}
+.hidden {
+	display: none;
+}
+.muted {
+	font-weight: 200;
+	font-size: .8em;
+	letter-spacing: normal;
+	line-height: auto;
+}
+
+/* Header Styles */
+.header#header {
+	display: none;
+}
+
+
+/* Overview Section Styles */
+@overview-background: #222930;
+@overview-text: #ABDCD6;
+@overview-links: #E9E9E9;
+
+section#overview {
+	background-color: @overview-background;
+	color: @overview-text;
+}
+section#overview a {
+	color: @overview-links;
+}
+section#overview a:hover {
+	color: @overview-text;
+}
+section#overview .title {
+	width: 100%;
+	text-align: center;
+	color: @overview-links;
+}
+section#overview .identity {
+	width: 100%;
+	text-align: center;
+}
+ul.pagelinks {
+	width: 100%;
+	text-align: center;
+	padding-top: 2em;
+}
+ul.pagelinks li {
+	list-style: none;
+	font-size: 1.5em;
+	line-height: 2em;
+}
+section#overview .scrollteaser {
+	width: 100%;
+	position: absolute;
+	bottom: 0em;
+	text-align: center;
+	
+	@media only screen and (max-height : @first-breakpoint-height) {
+		/* No need for scroll helpers */
+		.hidden;
+	}
+}
+
+
+/* Experience Section Styles */
+@experience-background: #F6F6F6;
+@experience-text: #2B2B2B;
+@experience-links: #FF900C;
+@experience-hover-background: #FFFCEC;
+
+section#experience {
+	background-color: @experience-background;
+	color: @experience-text;
+}
+section#experience a, section#experience .title {
+	color: @experience-links;
+}
+section#experience a:hover {
+	color: @experience-text;
+}
+.experience {
+	overflow: hidden;
+	.padded;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		width: 30em;
+		position: relative;
+		left: 50%;
+		margin-left: -17.5em;
+	}
+	
+	@media only screen and (min-width : @second-breakpoint-width) {
+		width: 45em;
+		margin-left: -22.5em;
+	}
+}
+.experience:hover {
+	background-color: @experience-hover-background;
+}
+.experience .logo_image {
+	.hidden;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		display: inline;
+		width: 5em;
+		max-width: 20%;
+		float: left;
+		.padded;
+	}
+	
+	@media only screen and (min-width : @second-breakpoint-width) {
+		width: 7em;
+	}
+}
+@media only screen and (min-width : @first-breakpoint-width) {
+	.experience .logo_image img {
+		width: 100%;
+		height: 100%;
+		background-color: #FFFFFF;
+	}
+	.experience, .experience .logo_image img {
+		.rounded-corners;
+	}
+	.experience:nth-child(even) .logo_image, .experience:nth-child(even) .jobdetails {
+		float: right;
+	}
+}
+.jobdetails {
+	width: 100%;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		width: 20em;
+		max-width: 80%;
+		float: left;
+		.padded;
+	}
+	
+	@media only screen and (min-width : @second-breakpoint-width) {
+		width: 33em;
+	}
+}
+.jobdetails span {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.jobdetails ul.outcomes {
+	padding: 1em;
+}
+.jobdetails .company:after {
+	content: " - ";
+}
+.jobdetails .type, .jobdetails .dates {
+	.muted;
+}
+.jobdetails .dates {
+	display: block;
+	width: 100%;
+}
+.jobdetails .team {
+	display: none;
+}
+
+
+/* Project Section Styles */
+@projects-background: #699E87;
+@projects-links: #FFFFFF;
+@projects-special: #BACFC6;
+
+section#projects {
+	background-color: @projects-background;
+	color: @experience-text;
+}
+section#projects .title {
+	color: @projects-links;
+}
+.project_list {
+	padding-top: 1em;
+}
+.project_list > li {
+	list-style: none;
+	background-color: @projects-special;
+	border: 1px solid #000000;
+	.rounded-corners;
+	
+	width: 200px;
+	height: 200px;
+	position: relative;
+	left: 50%;
+	margin-left: -100px;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		width: 300px;
+		height: 300px;
+		margin-left: -150px;
+		
+		line-height: 1.5em;
+	}
+	
+	@media only screen and (min-width : @second-breakpoint-width) {
+		
+	}
+}
+.project_list > li:hover {
+	background-color: @experience-background;
+}
+.project_list > li a {
+	color: inherit;
+	text-decoration: inherit;
+}
+.project_list > li h2 {
+	.sans-font-family;
+	padding-top: 0.5em;
+}
+.project_list > li p {
+	text-align: center;
+	.padded;
+}
+.project_list > li p .languages {
+	.muted;
+	.padded;
+	display: block;
+}
+
+
+
+
+/* About Section Styles */
+@about-background: #FF900C;
+@about-text: #FFFFFF;
+@about-links: @overview-background;
+@about-links-hover: #FFEDD7;
+
+section#about {
+	background-color: @about-background;
+	color: @about-text;
+}
+section#about a {
+	color: @about-links;
+}
+section#about a:hover {
+	color: @about-links-hover;
+}
+section#about .imagecontainer {
+	display: inline;
+	position: relative;
+	left: 50%;
+	margin-left: -150px;
+}
+section#about .imagecontainer > img {
+	border: 1px solid #000000;
+	.rounded-corners;
+}
+section#about p.about {
+	.padded;
+	
+	@media only screen and (min-width : @first-breakpoint-width) {
+		width: 36em;
+		position: relative;
+		left: 50%;
+		margin-left: -18em;
+		padding-top: 4em;
+	}
+	
+	@media only screen and (min-width : @second-breakpoint-width) {
+		padding-top: 2em;
+	}
+}
+
+/* Footer Styles */
+@footer-background: #666666;
+@footer-text: #FFFFFF;
+@footer-links-hover: #000000;
+
+footer#footer {
+	background-color: @footer-background;
+	color: @footer-text;
+}
+footer#footer a {
+	color: @footer-text;
+	text-decoration: none;
+}
+footer#footer a:hover {
+	color: @footer-links-hover;
+}
+footer#footer ul {
+	padding: 2em 0em 2em 2em;
+}
+footer#footer > ul li {
+	list-style: none;
+	display: inline;
+}
+footer > ul a:after {
+	content: " | ";
+	color: auto;
+}
+footer > ul a:last-child:after {
+	content: "";
+}
+	

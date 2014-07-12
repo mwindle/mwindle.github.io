@@ -5,336 +5,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Marc Windle</title>
+	<title>Marc Windle - Software Engineer and Web Developer</title>
+	
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-	<!-- Bootstrap -->
-	<!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-	<!-- <link href="bower_components/onepage-scroll/onepage-scroll.css" rel="stylesheet"> -->
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	    
-	<!--
-	<link href="css/mwindle.css" rel="stylesheet">
-	<script src="js/mwindle.js"></script>
-	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	 <script src="bower_components/onepage-scroll/jquery.onepage-scroll.min.js"></script> 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.js"></script>-->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<style>
-	
-	/* General Styles */
-	* {
-		margin: 0em;
-		padding: 0em;
-		max-width: 100%;
-	}
-	
-	body {
-		font-family: "Proxima Nova Regular", "Segoe UI",Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-		font-size: 1em;
-		font-weight: 400;
-		line-height: 1.5em;
-		letter-spacing: 0.02em;
-		text-align: justify;
-	}
-
-	section {
-		min-height: 100%;
-		height: 100dv;
-		margin: 0em;
-		overflow: clip;
-	}
-
-	h1, h2, h3, h4 {
-		width: 100%;
-		text-align: center;
-		font-family: "Skolar Bold", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif;
-		font-weight: 700;
-	}
-	.title {
-		font-size: 1.5em;
-		line-height: 2.0em;
-		letter-spacing: 0.03em;
-		text-transform: uppercase;
-		padding-top: 0.5em;
-		position: relative;
-		z-index: 100;
-	}
-
-	/* Header Styles */
-	.header#header {
-		display: none;
-	}
-	
-	
-	/* Overview Section Styles */
-	section#overview {
-		background-color: #222930;
-		color: #ABDCD6;
-	}
-	section#overview a {
-		color: #E9E9E9;
-	}
-	section#overview a:hover {
-		color: #ABDCD6;
-	}
-	section#overview .title {
-		width: 100%;
-		text-align: center;
-		color: #E9E9E9;
-	}
-	section#overview .identity {
-		width: 100%;
-		text-align: center;
-	}
-	ul.pagelinks {
-		width: 100%;
-		text-align: center;
-		padding-top: 2em;
-	}
-	ul.pagelinks li {
-		list-style: none;
-		font-size: 1.5em;
-		line-height: 2em;
-	}
-	section#overview .scrollteaser {
-		width: 100%;
-		position: absolute;
-		bottom: 0em;
-		text-align: center;
-	}
-	
-	
-	/* Experience Section Styles */
-	section#experience {
-		background-color: #F6F6F6;
-		color: #2B2B2B;
-	}
-	section#experience a, section#experience .title {
-		color: rgba(255,144, 12,1);
-	}
-	section#experience a:hover {
-		color: #2B2B2B;
-	}
-	.experience {
-		overflow: hidden;
-		padding: 1em;
-	}
-	.experience:hover {
-		background-color: #FFFCEC;
-	}
-	.experience .logo_image {
-		display: none;
-	}
-	.jobdetails {
-		width: 100%;
-	}
-	.jobdetails span {
-		font-weight: 700;
-		font-size: 1.1em;
-	}
-	.jobdetails ul.outcomes {
-		padding: 1em;
-	}
-	.jobdetails .company:after {
-		content: " - ";
-	}
-	.jobdetails .type, .jobdetails .dates {
-		font-weight: 200;
-		font-size: .8em;
-		letter-spacing: normal;
-		line-height: auto;
-	}
-	.jobdetails .dates {
-		display: block;
-		width: 100%;
-	}
-	.jobdetails .team {
-		display: none;
-	}
-	
-	
-	
-	/* Project Section Styles */
-	section#projects {
-		background-color: #699E87;
-		color: #2B2B2B;
-	}
-	section#projects a, section#projects .title {
-		color: #FFFFFF;
-	}
-	section#projects a:hover {
-		color: #2B2B2B;
-	}
-	
-	
-	/* About Section Styles */
-	section#about {
-		background-color: rgba(255,144, 12,1);
-		color: rgba(255, 255, 255, 1);
-	}
-	section#about a {
-		color: rgba(255,196,125,1);
-	}
-	section#about a:hover {
-		color: rgba(255,237,215,1);
-	}
-	section#about .imagecontainer {
-		display: inline;
-		position: relative;
-		left: 50%;
-		margin: 0px;
-		padding: 0px;
-		margin-left: -150px;
-	}
-	section#about p.about {
-		margin: 0em;
-		padding: 1em;
-	}
-	
-
-	footer#footer {
-		background-color: rgb(102, 102, 102);
-		color: #FFFFFF;
-	}
-	footer#footer a {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	footer#footer a:hover {
-		color: black;
-	}
-	footer#footer ul {
-		padding: 2em 0em 2em 2em;
-	}
-	footer#footer > ul li {
-		list-style: none;
-		display: inline;
-	}
-	footer > ul a:after {
-		content: " | ";
-		color: auto;
-	}
-	footer > ul a:last-child:after {
-		content: "";
-	}
-	
-	
-	@media only screen and (min-width : 800px) {
-		body {
-			font-size: 1.5em;
-			font-weight: 400;
-			line-height: 2.0em;
-			letter-spacing: 0.02em;
-		}
-		
-		.title {
-			font-size: 1.8em;
-			line-height: 2.4em;
-			letter-spacing: 0.03em;
-			padding-top: 1em;
-		}
-		.experience {
-			width: 30em;
-			position: relative;
-			left: 50%;
-			margin-left: -17.5em;
-		}
-		ul.pagelinks {
-			padding-top: 2em;
-		}
-		section#overview .scrollteaser {
-			display: block;
-		}
-		
-		/* There's enough room to show a nice image for the experience */
-		.experience .logo_image {
-			display: inline;
-			width: 5em;
-			max-width: 20%;
-			float: left;
-			padding: 1em;
-		}
-		.experience .logo_image img {
-			width: 100%;
-			height: 100%;
-			background-color: rgb(255, 255, 255);
-		}
-		.experience, .experience .logo_image img {
-			/* rounded corners */
-			-moz-border-radius: 10px;
-			-webkit-border-radius: 10px;
-			border-radius: 10px; /* future proofing */
-			-khtml-border-radius: 10px; /* for old Konqueror browsers */
-		}
-		.experience:nth-child(even) .logo_image, .experience:nth-child(even) .jobdetails {
-			float: right;
-		}
-		
-		.jobdetails {
-			width: 20em;
-			max-width: 80%;
-			float: left;
-			padding: 1em;
-		}
-		
-		
-		section#about p.about {
-			width: 36em;
-			position: relative;
-			left: 50%;
-			margin-left: -18em;
-			padding-top: 4em;
-		}
-	}
-	
-	@media only screen and (min-width : 1224px) {
-		
-		.experience {
-			width: 45em;
-			position: relative;
-			left: 50%;
-			margin-left: -22.5em;
-		}
-		.experience .logo_image {
-			display: inline;
-			width: 7em;
-			max-width: 20%;
-			float: left;
-			padding: 1em;
-		}
-		.jobdetails {
-			width: 33em;
-			max-width: 80%;
-			float: left;
-			padding: 1em;
-		}
-		
-		
-		section#about p.about {
-			width: 36em;
-			position: relative;
-			left: 50%;
-			margin-left: -18em;
-			padding-top: 4em;
-		}
-	}
-	
-	
-	/* Small height*/
-	@media only screen and (max-height : 500px) {
-		/* No need for scroll helpers */
-		section#overview .scrollteaser {
-			display: none;
-		}
-	}
-	
-	</style>
 	
 </head>
 
@@ -432,18 +108,23 @@
 			<h2 class="title">Projects</h2>
 			<ul class="project_list">
 				<li class="nowserving">
-					<h1>Now Serving</h1>
-					<p>Make waiting customers happy</p>
+				<a href="https://github.com/mwindle/nowserving">
+					<h2>Now Serving</h2>
+					<div class="nowserving-logo"></div>
+					<p>
+						Make waiting customers happy <span class="languages">JavaScript, JQuery, Backbone.js, Node.js, Jasmine, Grunt</span>
+					</p>
+				</a>
 				</li>
 			</ul>
 		</section>
 		<section id="about">
 			<h2 class="title">About</h2>
 			<div class="imagecontainer">
-				<img src="images/me.png" />
+				<img src="http://gravatar.com/avatar/a198dd23946ba1c20fd4dbc5796f8a51?s=300" />
 			</div>	
 			<p class="about">
-			Hey there! I'm Marc Windle, a Bachelor of Software Engineering graduate from the University of Victoria with seven plus years of experience between Amazon, Microsoft, and BlackBerry. 
+			Hey there! I'm Marc Windle, a Bachelor of Software Engineering graduate from the <a href="http://www.uvic.ca">University of Victoria</a> with seven plus years of experience between Amazon, Microsoft, and BlackBerry. 
 			I'm passionate about Web technologies and building cool things with software. 
 			</p>
 		</section>
@@ -461,6 +142,7 @@
 	<style>#forkongithub a{background:#000000;color:#FFFFFF;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:rgba(255,144, 12,1);color:#FFFFFF;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#FFFFFF;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/mwindle/mwindle.github.io">Fork me on GitHub</a></span>
 	
 	<script>
+		//Smooth scrolling for local page links
 		$(function() {
 		  $('a[href*=#]:not([href=#])').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -475,6 +157,7 @@
 			}
 		  });
 		});
+		
 		var prevHeight = 0;
 		var thresholdPx = 100;
 		var resizeSections = function(){
@@ -491,10 +174,13 @@
 			}
 			
 		}
+		
 		$(document).ready(function() {
+			//Setup section sizes for first view
 			resizeSections();
+			
+			//Resize sections whenever the window size changes
 			$(window).resize(resizeSections);
-			//add this later with mobile detection to hide address bar: window.scrollTo(0, 1)}, 100;
 		});
 	</script>
 	
