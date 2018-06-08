@@ -1,0 +1,51 @@
+---
+
+---
+@import "minima";
+
+p, ul, ol {
+  color: #2C2C2C;
+  font-size: 20px;
+  line-height: 1.6em;
+  font-family: georgia,serif;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+pre, code, .highlighter-rouge .highlight {
+  background-color: #F8F8F8;
+}
+
+h1 {
+  text-align:  center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.footnotes {
+  margin-top: 30px;
+}
+
+.footnotes * {
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: "Lato",Helvetica,Arial,sans-serif !important;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footnotes h6 {
+  text-align: center;
+  text-transform: uppercase;
+}
