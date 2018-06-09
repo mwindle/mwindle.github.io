@@ -1,6 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: blank
+title: About
+permalink: /
 ---
+<header class="post-header" markdown="1">
+  <h1 class="post-title" markdown="1">Hi, I'm Marc Windle</h1>
+</header>
+TODO
