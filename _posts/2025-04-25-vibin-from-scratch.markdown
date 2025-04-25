@@ -2,9 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: post
 title: "Vibin' from scratch"
+date:   2025-04-25 15:09:32 +0000
 permalink: /vibin-from-scratch
+
 ---
 # Vibin' from Scratch
 Think vibe coding apps are magic? Well, they kind of are, but they are also pretty simple at their core. Follow this guide to build your own vibe coding agent like Lovable, v0, Replit, etc. Some assembly required. 
@@ -25,7 +27,7 @@ There are a couple of ways to run this project -- do whatever works best for you
 ### Option 1 (recommended): Run the agent in a GitHub Codespace
 1. Create a new Codespace from this project
 
-![alt text](./images/image.png)
+![alt text](../images/image.png)
 
 2. Add your Anthropic API key to a `.env` file in the project root (look at `.env.template` for an example)
 ```text
